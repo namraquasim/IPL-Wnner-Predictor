@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <style>
+      header{
+        text-align: center;
+        color:white;
+        font-size:50px;
+        font-family: Cursive;
+        background: #7676f5;
+      	border: 3px solid;
+      	height:100px;
+      	width:100%;
+	      padding-top:30px;
+      }
+      footer{
+        background: #909090;
+        text-align: right;
+        margin:5px;
+        padding:15px;
+        font-family: Cursive;
+      }
+        .foot {
+                font-family: cursive;
+                font-size: 10px;
+                align-content: center;
+        }
+        .last {
+                font-size: 50px;
+          font-family: Cursive;
+                color: black;
+        }
+        .result {
+            padding:5px;
+            background-color: white;
+            margin: auto;
+            width: 100%;
+            height: 50%;
+            color: black;
+            border: 1px solid cornsilk;
+        }
+
+
+        .container {
+                background-color: white;
+
+        }
+      .form-group{
+        padding:10px;
+        text-align: center;
+        font-weight:bold;
+
+      }
+      .input{
+        background-image: url("https://3.bp.blogspot.com/-Xx3VMJJsULk/TbZmk-VfbuI/AAAAAAAAAI4/FLOHkG-SB-M/s1600/ipl_logo.gif");
+  opacity:0.7;
+        height:300px;
+        font-weight:bold;
+        text-align:center;
+      }
+      .btn-info
+      {
+        background-color: #2196F3;
+	height:40px;
+	width:100px;
+      }
+.btn-info:hover {background: #0b7dd1;}
+    </style>
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
+    <header>
+    <div class="card text-center">
+        <div class="card-header"><img src="https://lh3.googleusercontent.com/proxy/RqS9Vqo2TutGpliiiYnuVypGGSNXRnnB7uW4IMpbffh67JUrleQFFaBKOUuFPA8dHaj26MZsSHU0tyIfqk_prPmARDcmtzKqnzHxLTXjxnO4DNA6uwogipwt8I7hOMq5DCdDvTep0QCX1ubq"height=60px,width=60px,alt="">
+
+          IPL Match Predictor
+        </div>
+      </div>
+    </header>
+    <body>
+    <div class="container">
+            <form action="{{ url_for('main') }}" method="POST">
+            <fieldset>
+                <legend>IPL Winner Predictor</legend>
+              <div class="input">
+                <div class="form-group">
+                            <label for="exampleFormControlSelect1">City</label>
+                            <select name="City" class="form-control" id="exampleFormControlSelect1">
+                              <option>Select City</option>
+                              <option>Mumbai</option>
+                              <option>Delhi</option>
+                              <option>Bangalore</option>
+                              <option>Chennai</option>
+                              <option>Kolkata</option>
+                              <option>Pune</option>
+                              <option>Hyderabad</option>
+                              <option>Chandigarh</option>
+                              <option>Jaipur</option>
+                              <option>Kochi</option>
+                              <option>Jaipur</option>
+                              <option>Dharmasala</option>
+                              <option>Visakhapatnam</option>
+                            </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Home Team</label>
+                        <select name="Home" class="form-control" id="exampleFormControlSelect1">
+                          <option>Select Home Team</option>
+                          <option>Mumbai Indians</option>
+                          <option>Delhi Capitals</option>
+                          <option>Sunrisers Hyderabad</option>
+                          <option>Royal Challengers Bangalore</option>
+                          <option>Chennai Super Kings</option>
+                          <option>Kolkata Knight Riders</option>
+                          <option>Rajasthan Royals</option>
+                          <option>Sunrisers Hyderabad</option>
+                          <option>Kings XI Punjab</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Away Team</label>
+                        <select name="Away" class="form-control" id="exampleFormControlSelect1">
+                          <option>Select Away Team</option>
+                          <option>Delhi Capitals</option>
+                          <option>Mumbai Indians</option>
+                          <option>Sunrisers Hyderabad</option>
+                          <option>Royal Challengers Bangalore</option>
+                          <option>Chennai Super Kings</option>
+                          <option>Kolkata Knight Riders</option>
+                          <option>Rajasthan Royals</option>
+                          <option>Sunrisers Hyderabad</option>
+                          <option>Kings XI Punjab</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Toss Winner</label>
+                        <select name="toss_winner" class="form-control" id="exampleFormControlSelect1">
+                          <option>Select Toss Winner</option>
+                          <option>Home Team</option>
+                          <option>Away Team</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Toss Decision</label>
+                        <select name="toss_decision" class="form-control" id="exampleFormControlSelect1">
+                          <option>Select Toss Decision</option>
+                          <option>Batting</option>
+                          <option>Bowling</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Venue</label>
+                        <select name="venue" class="form-control" id="exampleFormControlSelect1">
+                          <option>Select Venue Stadium</option>
+                          <option>M Chinnaswamy Stadium</option>
+                          <option>Wankhede Stadium</option>
+                          <option>Feroz Shah Kotla</option>
+                          <option>Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+                          <option>Eden Gardens</option>
+                          <option>Punjab Cricket Association Stadium, Mohali</option>
+                          <option>MA Chidambaram Stadium, Chepauk</option>
+                          <option>Maharashtra Cricket Association Stadium</option>
+                          <option>Rajiv Gandhi International Stadium, Uppal</option>
+                          <option>Sawai Mansingh Stadium</option>
+                          <option>Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+                        </select>
+                </div>
+
+
+                <button type="submit" class="btn-info">Predict</button>
+              </div>
+            </fieldset>
+            </form>
+            <br>
+            <div class="result" align="center">
+                    {% if result %}
+                        {% for variable, value in original_input.items() %}
+                            <b>{{ variable }}</b> : {{ value }}
+                        {% endfor %}
+                        <br>
+                        <br> Predicted Winner:
+                           <p class="last">{{ result }}</p>
+                    {% endif %}
+            </div>
+        </div>
+        <br>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+
+    </div>
+    </div>
+<!-- Footer -->
+     <footer id="main-footer">
+    </br>
+      </br>
+      </br>
+      By: <a href="https://www.linkedin.com/in/adarsh-jha-4a17221a7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrpF7hgyWQOupaklMvdXwtQ%3D%3D"><img src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png"height = 30px width = 30px alt="logo"></a>-<span class = "name">Adarsh Jha</span> and
+
+      <a href="https://www.linkedin.com/in/namra-quasim-6667141ab?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2F1eADXmEQ4KdV24Sqkobhg%3D%3D"><img src="https://i.pinimg.com/originals/ce/09/3c/ce093c7214ad357bb665cfd2f66a8b6b.png"height = 30px width = 30px alt="logo"></a>-<span class = "name">Namra Quasim</span>
+    </footer>
+    </body>
+</html>
